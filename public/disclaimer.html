@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Blue Player disclaimer, third-party artwork information, and copyright notice procedure." />
+    <title>Disclaimer &amp; DMCA — Blue Player</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #04070d;
+            --surface: #0d1626;
+            --text: #e8f1ff;
+            --muted: #93a4bd;
+            --body: #c8d4e6;
+            --link: #2f8bff;
+            --heading: #6db5ff;
+            --border: rgba(120, 180, 255, 0.14);
+            --link-bg: rgba(47, 139, 255, 0.1);
+            --link-border: rgba(47, 139, 255, 0.25);
+            --notice: #ffb450;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 48px 16px;
+        }
+
+        .wrap {
+            width: min(100%, 820px);
+            margin: 0 auto;
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--link);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+            font-size: 0.92rem;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid var(--link-border);
+            border-radius: 8px;
+            background: var(--link-bg);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(1.7rem, 5vw, 2rem);
+            line-height: 1.25;
+        }
+
+        .updated {
+            margin: 0 0 24px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .card {
+            margin-bottom: 18px;
+            padding: 26px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: var(--surface);
+        }
+
+        .card h2 {
+            margin: 0 0 12px;
+            color: var(--heading);
+            font-size: 1.18rem;
+            line-height: 1.4;
+        }
+
+        .card p,
+        .card li {
+            color: var(--body);
+        }
+
+        .card p {
+            margin: 9px 0;
+        }
+
+        .card ul,
+        .card ol {
+            padding-left: 24px;
+        }
+
+        .card li {
+            margin: 7px 0;
+        }
+
+        .highlight {
+            margin: 12px 0 16px;
+            padding: 14px 18px;
+            border-left: 3px solid var(--notice);
+            border-radius: 8px;
+            background: rgba(255, 180, 80, 0.08);
+            color: var(--body);
+        }
+
+        .highlight strong {
+            color: var(--notice);
+        }
+
+        .email-box {
+            margin: 16px 0;
+            padding: 16px;
+            border: 1px solid var(--link-border);
+            border-radius: 12px;
+            background: var(--link-bg);
+            overflow-wrap: anywhere;
+        }
+
+        .email-box strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        footer {
+            padding: 12px 4px 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 28px 14px;
+            }
+
+            .card {
+                padding: 20px;
+                border-radius: 14px;
+            }
+
+            .nav {
+                gap: 8px;
+                margin-bottom: 26px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        .language-summary {
+            background: rgba(255, 180, 80, 0.06);
+            border-left: 3px solid #ffb450;
+        }
+
+        .language-summary h2 {
+            color: #ffb450;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav class="nav" aria-label="Site navigation">
+            <a href="./index.html">&larr; Blue Player</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms of Service</a>
+        </nav>
+
+        <main>
+            <h1>Disclaimer &amp; DMCA</h1>
+            <p class="updated">Last updated: November 7, 2026</p>
+
+            <section class="card" aria-labelledby="about">
+                <h2 id="about">1. About Blue Player</h2>
+                <div class="highlight">
+                    <strong>Blue Player is an offline-first Android music player.</strong>
+                    It plays audio files available in the device's local media library. It is not a music-streaming
+                    service, music catalogue, or media-hosting platform.
+                </div>
+                <p>The app reads audio-library information through Android MediaStore after the required Android
+                    permissions have been granted. Depending on the features used, this can include track title, artist,
+                    album, duration, file location, and embedded artwork.</p>
+                <p>Blue Player includes local-library features such as playlists, favorites, bookmarks, playback-queue
+                    restoration, and audio-tag editing. Actions that change or remove local files or tags are performed
+                    on the device and are subject to Android permissions and the user's actions.</p>
+                <p>The app does not provide the audio files in the user's library. The online artwork features described
+                    below search for artwork using track or artist information; they do not upload the audio track
+                    itself as part of those lookups.</p>
+            </section>
+
+            <section class="card" aria-labelledby="artwork">
+                <h2 id="artwork">2. Embedded Artwork and Third-Party Services</h2>
+                <p>Blue Player can display artwork already embedded in a local audio file. It can also search external
+                    services for album covers and artist images when Internet Access is enabled in the app's settings
+                    and the current network settings allow the request.</p>
+                <p>The current source code uses the following services:</p>
+                <ul>
+                    <li><strong>Apple iTunes Search API</strong> — searches track information and album artwork.</li>
+                    <li><strong>Deezer API</strong> — searches for album covers and artist images.</li>
+                    <li><strong>MusicBrainz Web Service</strong> — searches release information used to locate album
+                        artwork.</li>
+                    <li><strong>Cover Art Archive</strong> — retrieves cover artwork associated with MusicBrainz
+                        releases.</li>
+                    <li><strong>Last.fm API</strong> — looks up track and album information, including available
+                        artwork.</li>
+                    <li><strong>Wikipedia API</strong> — searches English- and Russian-language Wikipedia pages for
+                        artist thumbnails.</li>
+                </ul>
+                <p>For these lookups, the app sends search terms derived from the track title and artist name, or the
+                    artist name for artist-image searches. The relevant third-party service may also receive ordinary
+                    connection information, such as the device's IP address and request headers.</p>
+                <p>When an image is found, Blue Player downloads it and keeps a local copy in the app's private storage.
+                    Saved artwork can therefore remain available without another network request. Clearing the relevant
+                    artwork cache removes the app's cached copies and associated lookup records according to the app's
+                    cache controls.</p>
+                <p>Internet access is disabled by default in the app settings. Third-party services are independent
+                    services; their availability, terms, privacy practices, and content-licensing conditions are
+                    controlled by their respective operators.</p>
+            </section>
+
+            <section class="card" aria-labelledby="copyright">
+                <h2 id="copyright">3. Copyright and Third-Party Materials</h2>
+                <p>Blue Player does not claim ownership of music, album covers, artist photographs, names, logos, or
+                    other materials supplied by users or retrieved from third-party services. Those materials may be
+                    protected by copyright, trademark, or other rights belonging to their respective owners.</p>
+                <p>Displaying artwork to identify a track does not automatically make that use fair use or otherwise
+                    authorized in every country or situation. The applicable rights and licence terms depend on the
+                    material, its source, and the relevant law.</p>
+                <p>Apple, Deezer, MusicBrainz, Cover Art Archive, Last.fm, Wikipedia, and their respective names and
+                    marks are referenced only to identify external services. Mention of a service does not imply
+                    sponsorship, endorsement, or affiliation with Blue Player.</p>
+            </section>
+
+            <section class="card" aria-labelledby="responsibility">
+                <h2 id="responsibility">4. User Responsibility</h2>
+                <p>You are responsible for ensuring that you have the rights or permissions required to play, copy,
+                    edit, or otherwise use audio files and other materials on your device.</p>
+                <p>Blue Player does not determine whether a local file was lawfully obtained, and it cannot grant you
+                    rights to music or artwork belonging to another person or organization. Before sharing, publishing,
+                    or distributing material, check the applicable copyright and licence conditions.</p>
+            </section>
+
+            <section class="card" aria-labelledby="dmca">
+                <h2 id="dmca">5. Copyright and DMCA Notices</h2>
+                <p>Blue Player respects intellectual-property rights. If you believe that material displayed or
+                    retrieved by the app infringes your copyright, you may contact us using the address below.</p>
+                <div class="email-box">
+                    <strong>Copyright Contact</strong>
+                    Gmail: <a href="mailto:blueplayer.support@gmail.com">blueplayer.support@gmail.com</a><br />
+                    Subject: <span>DMCA Takedown Request</span>
+                </div>
+                <p>To help us review a notice, include the following information where applicable:</p>
+                <ol>
+                    <li>Your physical or electronic signature, or the signature of a person authorized to act for the
+                        rights holder.</li>
+                    <li>Identification of the copyrighted work you believe has been infringed.</li>
+                    <li>Identification of the specific material shown by Blue Player, such as the track or artist name
+                        and the image URL or source URL, if available.</li>
+                    <li>Your contact details, including an email address and other information needed to respond.</li>
+                    <li>A statement that you have a good-faith belief that the disputed use is not authorized by the
+                        rights holder, its agent, or the law.</li>
+                    <li>For a formal DMCA notice, the statement required by applicable law that the information is
+                        accurate and, under penalty of perjury, that you are the rights holder or authorized to act on
+                        the rights holder's behalf.</li>
+                </ol>
+                <p>We will review notices sent to this address and assess what action is available within Blue Player.
+                    Because album covers and artist images are obtained from independent external services, we cannot
+                    remove material from those services or their servers. Where the material is hosted by a third party,
+                    you may also need to contact that provider directly.</p>
+                <p>This contact address is provided for copyright-related communications. It should not be taken as a
+                    representation that Blue Player hosts user-uploaded content or that this contact has been registered
+                    as a statutory DMCA designated agent.</p>
+            </section>
+
+            <section class="card" aria-labelledby="availability">
+                <h2 id="availability">6. Availability and Limitation of Liability</h2>
+                <p>Blue Player depends on Android system components, local file access, and—when enabled—independent
+                    third-party services for optional artwork lookups. We do not guarantee that every track will be
+                    identified correctly, that artwork will be available, or that an external service will remain
+                    accessible.</p>
+                <p>To the extent permitted by applicable law, Blue Player and its developers are not responsible for the
+                    accuracy, availability, licensing status, or content of materials supplied by third-party services,
+                    or for a user's unauthorized use of local media. Nothing in this notice excludes liability or rights
+                    that cannot lawfully be excluded.</p>
+            </section>
+
+            <section class="card" aria-labelledby="contact">
+                <h2 id="contact">7. Contact</h2>
+                <p>For questions about this Disclaimer or copyright-related notices, contact:</p>
+                <p><a href="mailto:blueplayer.support@gmail.com">blueplayer.support@gmail.com</a></p>
+            </section>
+            <section class="card language-summary" lang="tk">
+                <h2>Türkmençe gysgaça</h2>
+                <p>
+                    Blue Player — Android enjamyndaky ýerli audio faýllary
+                    çalýan saz pleýeri. Ol saz akymyny ýa-da aýdym faýllaryny
+                    paýlaýan hyzmat däldir. Programma Android MediaStore
+                    arkaly enjamyňyzdaky saz kitaphanasynyň maglumatlaryny okaýar.
+
+                    Internet sazlamalarda açylanda, sazlaryň we ýerine
+                    ýetirijileriň maglumatlary albom suratlaryny ýa-da
+                    ýerine ýetiriji suratlaryny gözlemek üçin Apple iTunes,
+                    Deezer, MusicBrainz, Cover Art Archive, Last.fm we Wikipedia
+                    ýaly daşarky hyzmatlara iberilip bilner.
+
+                    Ýüklenen suratlaryň nusgalary programmanyň enjamdaky
+                    hususy ammarynda saklanýar. Saz faýllaryny we beýleki
+                    materiallary kanuny ulanmak üçin zerur hukuklaryň bolmagy
+                    ulanyjynyň jogapkärçiligidir.
+
+                    Awtorlyk hukugy bilen bagly ýüz tutmalar üçin:
+                    <a href="mailto:blueplayer.support@gmail.com">
+                        blueplayer.support@gmail.com
+                    </a>.
+                </p>
+            </section>
+
+            <section class="card language-summary" lang="ru">
+                <h2>Кратко по-русски</h2>
+                <p>
+                    Blue Player — Android-плеер для локальных аудиофайлов,
+                    а не сервис потоковой музыки или хостинг медиа.
+                    Приложение читает сведения о медиатеке устройства через
+                    Android MediaStore.
+
+                    При включённом интернет-доступе названия треков и имена
+                    исполнителей могут передаваться Apple iTunes, Deezer,
+                    MusicBrainz, Cover Art Archive, Last.fm и Wikipedia
+                    для поиска обложек и изображений артистов.
+
+                    Загруженные изображения сохраняются в локальном
+                    приватном хранилище приложения. Права на музыку и другие
+                    материалы принадлежат их правообладателям; пользователь
+                    отвечает за законность использования своих файлов.
+
+                    Обращения по вопросам авторских прав:
+                    <a href="mailto:blueplayer.support@gmail.com">
+                        blueplayer.support@gmail.com
+                    </a>.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            Blue Player — Android music player. Third-party services and materials remain subject to their respective
+            owners' terms and rights.
+        </footer>
+    </div>
+</body>
+
+</html>

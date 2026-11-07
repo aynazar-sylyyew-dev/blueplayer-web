@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Blue Player</title>
+    <style>
+        :root,
+        [data-theme='dark'] {
+            --bg: #000000;
+            --text: #f2f4f8;
+            --muted: #9aa0ab;
+            --accent: #2f8bff;
+            --accent-2: #0060df;
+            --glow: rgba(47, 139, 255, 0.22);
+            color-scheme: dark;
+        }
+
+        [data-theme='light'] {
+            --bg: #ffffff;
+            --text: #10131a;
+            --muted: #5b6472;
+            --accent: #0070f3;
+            --accent-2: #0055d4;
+            --glow: rgba(0, 112, 243, 0.14);
+            color-scheme: light;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 16px;
+            text-align: center;
+            position: relative;
+            overflow-x: hidden;
+            transition: background 0.25s, color 0.25s;
+        }
+
+        body::before,
+        body::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--glow), transparent 70%);
+            pointer-events: none;
+        }
+
+        body::before {
+            width: 560px;
+            height: 560px;
+            top: -180px;
+            right: -180px;
+        }
+
+        body::after {
+            width: 460px;
+            height: 460px;
+            bottom: -150px;
+            left: -150px;
+        }
+
+        .wrap {
+            max-width: 560px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+        }
+
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            filter: drop-shadow(0 2px 10px rgba(47, 139, 255, 0.45));
+        }
+
+        .error-code {
+            font-size: clamp(5rem, 16vw, 10rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .title {
+            font-size: clamp(1.4rem, 4vw, 1.9rem);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            max-width: 420px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 26px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(47, 139, 255, 0.35);
+            transition: transform 0.15s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .feedback {
+            margin-top: 48px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .feedback a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .feedback a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <a class="logo-link" href="/blueplayer-web/">
+            <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true">
+                <defs>
+                    <linearGradient id="bp404g" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#39b8ff" />
+                        <stop offset="1" stop-color="#0a84ff" />
+                    </linearGradient>
+                </defs>
+                <circle cx="32" cy="32" r="32" fill="#0b63f6" />
+                <circle cx="32" cy="32" r="19" fill="none" stroke="url(#bp404g)" stroke-width="5" />
+                <path d="M27 22.5v19l16-9.5z" fill="url(#bp404g)" />
+            </svg>
+            Blue Player
+        </a>
+
+        <div class="error-code">404</div>
+        <h1 class="title" data-i18n="title">Page not found</h1>
+        <p class="subtitle" data-i18n="subtitle">The page you're looking for doesn't exist or has been moved. Let's get
+            you back to the music.</p>
+
+        <a class="btn" href="/blueplayer-web/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span data-i18n="backHome">Back to Home</span>
+        </a>
+
+        <p class="feedback">
+            <span data-i18n="contact">Questions?</span>
+            <a href="mailto:blueplayer.support@gmail.com">blueplayer.support@gmail.com</a>
+        </p>
+    </div>
+
+    <script>
+        (function () {
+            var stored = 'system';
+            try { stored = localStorage.getItem('theme') || 'system'; } catch (e) { }
+            var mq = window.matchMedia('(prefers-color-scheme: light)');
+            function apply() {
+                var light = stored === 'light' || (stored === 'system' && mq.matches);
+                document.documentElement.dataset.theme = light ? 'light' : 'dark';
+            }
+            apply();
+            mq.addEventListener('change', apply);
+        })();
+
+        (function () {
+            var translations = {
+                en: {
+                    title: 'Page not found',
+                    subtitle: "The page you're looking for doesn't exist or has been moved. Let's get you back to the music.",
+                    backHome: 'Back to Home',
+                    contact: 'Questions?'
+                },
+                ru: {
+                    title: 'Страница не найдена',
+                    subtitle: 'Страница, которую вы ищете, не существует или была перемещена. Давайте вернёмся к музыке.',
+                    backHome: 'На главную',
+                    contact: 'Вопросы?'
+                },
+                tr: {
+                    title: 'Sayfa bulunamadı',
+                    subtitle: 'Aradığınız sayfa mevcut değil veya taşınmış. Müziğe geri dönelim.',
+                    backHome: 'Ana Sayfa',
+                    contact: 'Sorularınız mı var?'
+                },
+                kk: {
+                    title: 'Бет табылмады',
+                    subtitle: 'Іздеген бетіңіз жоқ немесе көшірілген. Музыкаға оралайық.',
+                    backHome: 'Басты бет',
+                    contact: 'Сұрақтар?'
+                },
+                uz: {
+                    title: 'Sahifa topilmadi',
+                    subtitle: "Qidirayotgan sahifangiz mavjud emas yoki ko'chirilgan. Musiqaga qaytaylik.",
+                    backHome: 'Bosh sahifa',
+                    contact: 'Savollar?'
+                },
+                ky: {
+                    title: 'Барак табылган жок',
+                    subtitle: 'Сиз издеген барак жок же которулган. Музыкага кайталы.',
+                    backHome: 'Башкы бет',
+                    contact: 'Суроолор?'
+                },
+                tg: {
+                    title: 'Саҳифа ёфт нашуд',
+                    subtitle: 'Саҳифае, ки меҷӯед, вуҷуд надорад ё кӯчонида шудааст. Биёед ба мусиқӣ баргардем.',
+                    backHome: 'Саҳифаи асосӣ',
+                    contact: 'Саволҳо?'
+                }
+            };
+            var lang = 'en';
+            try {
+                var saved = localStorage.getItem('lang');
+                if (saved && translations[saved]) lang = saved;
+            } catch (e) { }
+            var t = translations[lang];
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                if (t[key]) el.textContent = t[key];
+            });
+            document.documentElement.lang = lang;
+        })();
+    </script>
+</body>
+
+</html>
