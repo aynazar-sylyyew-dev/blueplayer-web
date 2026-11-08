@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="%BASE_URL%icon/icon-tab.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%icon/icon.png" />
     <title>404 — Blue Player</title>
     <style>
         :root,
@@ -95,7 +97,7 @@
         .logo-icon {
             width: 34px;
             height: 34px;
-            filter: drop-shadow(0 2px 10px rgba(47, 139, 255, 0.45));
+            filter: drop-shadow(0 2px 10px rgba(47, 139, 255, 0.4));
         }
 
         .error-code {
@@ -166,19 +168,19 @@
 
 <body>
     <div class="wrap">
-        <a class="logo-link" href="/blueplayer-web/">
-            <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true">
-                <defs>
-                    <linearGradient id="bp404g" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0" stop-color="#39b8ff" />
-                        <stop offset="1" stop-color="#0a84ff" />
-                    </linearGradient>
-                </defs>
-                <circle cx="32" cy="32" r="32" fill="#0b63f6" />
-                <circle cx="32" cy="32" r="19" fill="none" stroke="url(#bp404g)" stroke-width="5" />
-                <path d="M27 22.5v19l16-9.5z" fill="url(#bp404g)" />
-            </svg>
-            Blue Player
+        <img class="logo-icon" src="/blueplayer-web/icon/icon-web.png" alt="" />
+        <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+                <linearGradient id="bp404g" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#39b8ff" />
+                    <stop offset="1" stop-color="#0a84ff" />
+                </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="16" fill="#0b63f6" />
+            <rect x="13" y="13" width="38" height="38" rx="10" fill="none" stroke="url(#bp404g)" stroke-width="5" />
+            <path d="M27 22.5v19l16-9.5z" fill="url(#bp404g)" />
+        </svg>
+        Blue Player
         </a>
 
         <div class="error-code">404</div>
