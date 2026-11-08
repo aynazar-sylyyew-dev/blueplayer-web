@@ -35,6 +35,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -61,6 +62,12 @@ body {
   backdrop-filter: blur(12px);
   background: var(--header-bg);
   border-bottom: 1px solid var(--border);
+}
+
+@supports not ((backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))) {
+  .header {
+    background: var(--bg);
+  }
 }
 
 .header-inner {
@@ -785,23 +792,54 @@ body {
 }
 
 @media (max-width: 640px) {
-  .header {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+  .footer-bottom {
+    position: relative;
   }
 
-  .lang-switch .lang-menu,
+  .footer .lang-switch {
+    position: static;
+  }
+
   .lang-switch.up .lang-menu {
-    position: fixed;
-    top: 50%;
     left: 50%;
     right: auto;
-    bottom: auto;
-    transform: translate(-50%, -50%);
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%);
     width: min(300px, calc(100vw - 32px));
     min-width: 0;
     max-height: min(70vh, 420px);
     overflow-y: auto;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .lang-switch:not(.up) .lang-menu {
+    max-height: min(70vh, 420px);
+    overflow-y: auto;
+  }
+
+  .header-inner {
+    gap: 10px;
+  }
+
+  .logo {
+    gap: 8px;
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 0.88rem;
+  }
+
+  .lang-toggle {
+    padding: 6px 8px;
+    font-size: 0.88rem;
   }
 }

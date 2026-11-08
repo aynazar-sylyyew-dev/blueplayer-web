@@ -156,7 +156,6 @@
     .ds-table td:first-child {
       color: #e8f1ff;
       font-weight: 600;
-      white-space: nowrap;
     }
 
     .ok {
@@ -195,6 +194,62 @@
       border-radius: 8px;
       margin: 12px 0;
       font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 32px 12px;
+      }
+
+      .card {
+        padding: 20px 16px;
+        border-radius: 14px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .nav {
+        gap: 8px;
+      }
+
+      .nav a {
+        padding: 6px 10px;
+        font-size: 0.82rem;
+      }
+      
+      table,
+      tbody,
+      tr,
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        border-bottom: 1px solid rgba(120, 180, 255, 0.12);
+        padding: 10px 0;
+      }
+
+      tr:last-child {
+        border-bottom: none;
+      }
+
+      td {
+        border-bottom: none;
+        padding: 4px 0;
+      }
+
+      td:first-child {
+        color: #6db5ff;
+        font-weight: 600;
+        white-space: normal;
+      }
     }
   </style>
 </head>
