@@ -1,8 +1,7 @@
 import { useLang } from '../i18n'
 import LanguageSwitcher from './LanguageSwitcher'
 import LibrariesMenu from './LibrariesMenu'
-
-const base = import.meta.env.BASE_URL
+import Logo from './Logo'
 
 export default function Header() {
     const { t } = useLang()
@@ -10,7 +9,7 @@ export default function Header() {
         <header className="header">
             <div className="container header-inner">
                 <a className="logo" href="#top">
-                    <img src={`${base}icon/icon.png`} alt="" />
+                    <Logo size={34} />
                     Blue Player
                 </a>
                 <div className="header-center">

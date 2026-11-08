@@ -1,6 +1,7 @@
 import { useLang } from '../i18n'
 import LanguageSwitcher from './LanguageSwitcher'
 import ThemeSwitcher from './ThemeSwitcher'
+import Logo from './Logo'
 
 const base = import.meta.env.BASE_URL
 
@@ -13,7 +14,7 @@ export default function Footer() {
                 <div className="footer-grid reveal">
                     <div>
                         <a className="logo" href="#top">
-                            <img src={`${base}icon/icon.png`} alt="" />
+                            <Logo size={34} />
                             Blue Player
                         </a>
                         <p className="footer-desc">{t.footer.description}</p>
