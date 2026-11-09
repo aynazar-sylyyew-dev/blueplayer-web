@@ -6,16 +6,14 @@ from pathlib import Path
 try:
     from PIL import Image, ImageChops, ImageDraw
 except ImportError:
-    sys.exit("Нужен Pillow:  pip install pillow")
-
+    sys.exit("Need Pillow:  pip install pillow")
+    
 ROUND_RATIO = 0.2941
-
 
 def rounded_mask(size: int, radius: int) -> Image.Image:
     m = Image.new("L", (size, size), 0)
     ImageDraw.Draw(m).rounded_rectangle([0, 0, size - 1, size - 1], radius=radius, fill=255)
     return m
-
 
 def bake_round(img: Image.Image, ratio: float = ROUND_RATIO) -> Image.Image:
     size = img.size[0]
@@ -25,7 +23,6 @@ def bake_round(img: Image.Image, ratio: float = ROUND_RATIO) -> Image.Image:
     out.putalpha(ImageChops.darker(out.getchannel("A"), mask))
     return out
 
-
 ap = argparse.ArgumentParser()
 ap.add_argument("png", nargs="?", default="public/icon/icon.png")
 ap.add_argument("-o", "--out", default="public/icon/icon-tab.png")
@@ -34,7 +31,7 @@ a = ap.parse_args()
 
 src = Path(a.png)
 if not src.exists():
-    sys.exit(f"Не найден {src}")
+    sys.exit(f"File not found: {src}")
 
 img = Image.open(src).convert("RGBA")
 small = img.resize((a.size, a.size), Image.LANCZOS)
@@ -45,5 +42,5 @@ buf = io.BytesIO()
 bake_round(small).save(buf, format="PNG", optimize=True)
 out.write_bytes(buf.getvalue())
 
-print(f"{src.name} ({src.stat().st_size} Б) -> {out.name} ({out.stat().st_size} Б), resize {a.size}x{a.size}")
-print(f"Запечённое скругление: {ROUND_RATIO*100:.1f}% (радиус {round(a.size*ROUND_RATIO)}px при {a.size}px)")
+print(f"{src.name} ({src.stat().st_size} B) -> {out.name} ({out.stat().st_size} B), resize {a.size}x{a.size}")
+print(f"Baked rounded corners: {ROUND_RATIO*100:.1f}% (radius {round(a.size*ROUND_RATIO)}px at {a.size}px)")
