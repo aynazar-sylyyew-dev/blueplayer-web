@@ -9,208 +9,18 @@
     <link rel="icon" type="image/png" href="./icon/icon-tab.png" />
     <link rel="apple-touch-icon" href="./icon/icon.png" />
     <title>Disclaimer &amp; DMCA — Blue Player</title>
-    <style>
-        :root {
-            color-scheme: dark;
-            --bg: #04070d;
-            --surface: #0d1626;
-            --text: #e8f1ff;
-            --muted: #93a4bd;
-            --body: #c8d4e6;
-            --link: #2f8bff;
-            --heading: #6db5ff;
-            --border: rgba(120, 180, 255, 0.14);
-            --link-bg: rgba(47, 139, 255, 0.1);
-            --link-border: rgba(47, 139, 255, 0.25);
-            --notice: #ffb450;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 48px 16px;
-        }
-
-        .wrap {
-            width: min(100%, 820px);
-            margin: 0 auto;
-        }
-
-        a {
-            color: var(--link);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        a:focus-visible {
-            outline: 2px solid var(--link);
-            outline-offset: 3px;
-            border-radius: 4px;
-        }
-
-        .nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 32px;
-            font-size: 0.92rem;
-        }
-
-        .nav a {
-            display: inline-block;
-            padding: 6px 12px;
-            border: 1px solid var(--link-border);
-            border-radius: 8px;
-            background: var(--link-bg);
-        }
-
-        h1 {
-            margin: 0 0 8px;
-            font-size: clamp(1.7rem, 5vw, 2rem);
-            line-height: 1.25;
-        }
-
-        .updated {
-            margin: 0 0 24px;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        .card {
-            margin-bottom: 18px;
-            padding: 26px;
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            background: var(--surface);
-        }
-
-        .card h2 {
-            margin: 0 0 12px;
-            color: var(--heading);
-            font-size: 1.18rem;
-            line-height: 1.4;
-        }
-
-        .card p,
-        .card li {
-            color: var(--body);
-        }
-
-        .card p {
-            margin: 9px 0;
-        }
-
-        .card ul,
-        .card ol {
-            padding-left: 24px;
-        }
-
-        .card li {
-            margin: 7px 0;
-        }
-
-        .highlight {
-            margin: 12px 0 16px;
-            padding: 14px 18px;
-            border-left: 3px solid var(--notice);
-            border-radius: 8px;
-            background: rgba(255, 180, 80, 0.08);
-            color: var(--body);
-        }
-
-        .highlight strong {
-            color: var(--notice);
-        }
-
-        .email-box {
-            margin: 16px 0;
-            padding: 16px;
-            border: 1px solid var(--link-border);
-            border-radius: 12px;
-            background: var(--link-bg);
-            overflow-wrap: anywhere;
-        }
-
-        .email-box strong {
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        footer {
-            padding: 12px 4px 0;
-            color: var(--muted);
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 520px) {
-            body {
-                padding: 28px 14px;
+    <script>
+        (function () {
+            try {
+                var m = localStorage.getItem('theme') || 'system';
+                var dark = m === 'dark' || (m === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+            } catch (e) {
+                document.documentElement.dataset.theme = 'dark';
             }
-
-            .card {
-                padding: 20px;
-                border-radius: 14px;
-            }
-
-            .nav {
-                gap: 8px;
-                margin-bottom: 26px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-        }
-
-        .language-summary {
-            background: rgba(255, 180, 80, 0.06);
-            border-left: 3px solid #ffb450;
-        }
-
-        .language-summary h2 {
-            color: #ffb450;
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding: 32px 12px;
-            }
-
-            .card {
-                padding: 20px 16px;
-                border-radius: 14px;
-            }
-
-            h1 {
-                font-size: 1.6rem;
-            }
-
-            .nav {
-                gap: 8px;
-            }
-
-            .nav a {
-                padding: 6px 10px;
-                font-size: 0.82rem;
-            }
-        }
-    </style>
+        })();
+    </script>
+    <link rel="stylesheet" href="./docs.css" />
 </head>
 
 <body>
@@ -401,6 +211,19 @@
             owners' terms and rights.
         </footer>
     </div>
+    <script>
+        (function () {
+            function apply() {
+                try {
+                    var m = localStorage.getItem('theme') || 'system';
+                    var dark = m === 'dark' || (m === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+                } catch (e) { }
+            }
+            window.addEventListener('storage', apply);
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', apply);
+        })();
+    </script>
 </body>
 
 </html>
