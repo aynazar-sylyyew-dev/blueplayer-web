@@ -44,6 +44,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-credits reveal">
+                    {/* 1. BASS Audio Library */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -53,6 +54,8 @@ export default function Footer() {
                         </div>
                         <span>{t.footer.credits.bass}</span>
                     </div>
+
+                    {/* 2. BASS FX */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -61,24 +64,48 @@ export default function Footer() {
                         </div>
                         <span>{t.footer.credits.bassfx}</span>
                     </div>
+
+                    {/* 3. blueplayer_waveform_extractor */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0M2 17c2-3 4-3 6 0s4 3 6 0 4-3 6 0M2 7c2-3 4-3 6 0s4 3 6 0 4-3 6 0" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                                <path d="M2 12c2.2-3 4.4-3 6.5 0s4.3 3 6.5 0 4.3-3 6.5 0" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                             </svg>
                         </div>
                         <span>{t.footer.credits.waveform}</span>
                     </div>
+
+                    {/* 4. blueplayer_stereo_echo */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" strokeWidth="1.8" />
-                                <circle cx="12" cy="14" r="3" fill="none" stroke="currentColor" strokeWidth="1.8" />
-                                <circle cx="12" cy="7.5" r="1.2" fill="currentColor" />
+                                <path d="M9 9.2a4 4 0 0 0 0 5.6M15 9.2a4 4 0 0 1 0 5.6M6 6.6a7.6 7.6 0 0 0 0 10.8M18 6.6a7.6 7.6 0 0 1 0 10.8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                             </svg>
                         </div>
                         <span>{t.footer.credits.echo}</span>
                     </div>
+
+                    {/* 5. blueplayer_bass_engine */}
+                    <div className="credit-item">
+                        <div className="credit-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 12c2.2 0 2.8-7 5-7s2.6 14 5 14 2.8-14 5-14 2.8 7 5 7" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                        <span>{t.footer.credits.bass_engine}</span>
+                    </div>
+
+                    {/* 6. blueplayer_slowed_reverb */}
+                    <div className="credit-item">
+                        <div className="credit-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 12a8 8 0 0 1 16 0M7 12a5 5 0 0 1 10 0M10 12a2 2 0 0 1 4 0" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                            </svg>
+                        </div>
+                        <span>{t.footer.credits.slowed_reverb}</span>
+                    </div>
+
+                    {/* 7. TagLib */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -88,6 +115,8 @@ export default function Footer() {
                         </div>
                         <span>{t.footer.credits.taglib}</span>
                     </div>
+
+                    {/* 8. TagLib Android */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -97,6 +126,8 @@ export default function Footer() {
                         </div>
                         <span>{t.footer.credits.taglib_android}</span>
                     </div>
+
+                    {/* 9. iTunes Search API */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -105,6 +136,8 @@ export default function Footer() {
                         </div>
                         <span>{t.footer.credits.itunes}</span>
                     </div>
+
+                    {/* 10. Deezer API */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -113,6 +146,8 @@ export default function Footer() {
                         </div>
                         <span>{t.footer.credits.deezer}</span>
                     </div>
+
+                    {/* 11. MusicBrainz & Cover Art Archive */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -122,6 +157,8 @@ export default function Footer() {
                         </div>
                         <span>{t.footer.credits.musicbrainz}</span>
                     </div>
+
+                    {/* 12. Last.fm */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -130,6 +167,8 @@ export default function Footer() {
                         </div>
                         <span>{t.footer.credits.lastfm}</span>
                     </div>
+
+                    {/* 13. Wikipedia */}
                     <div className="credit-item">
                         <div className="credit-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -141,7 +180,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="footer-feedback">
+                <div className="footer-feedback reveal">
                     <a href="mailto:blueplayer.support@gmail.com">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
